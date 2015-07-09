@@ -111,7 +111,7 @@ class BaseController:
         v2 = numpy.dot(quaternion_matrix([o.x, o.y, o.z, o.w]), v1)
         self.odom.pose.pose.position.x += v2[0,3]
         self.odom.pose.pose.position.y += v2[1,3]
-        q1 = quaternion_about_axis(self.cmd.angular.z*control_interval, (0, 0, 1))
+        q1 = quaternion_about_axis(-1.0*self.cmd.angular.z*control_interval, (0, 0, 1))
         o  = self.odom.pose.pose.orientation
         q2 = quaternion_multiply([o.x, o.y, o.z, o.w], q1)
         self.odom.pose.pose.orientation.x = q2[0]
@@ -120,7 +120,7 @@ class BaseController:
         self.odom.pose.pose.orientation.w = q2[3]
         self.odom.twist.twist.linear.x = v2[0,3]
         self.odom.twist.twist.linear.y = v2[1,3]
-        self.odom.twist.twist.angular.z += self.cmd.angular.z * control_interval
+        self.odom.twist.twist.angular.z += -1.0*self.cmd.angular.z * control_interval
         self.odom.header.stamp = rospy.Time.now()
 
         if (rospy.Time.now() - self.last_cmd_time).to_sec() > sec_idle: ## if new cmd_vel did not comes for 5 sec
