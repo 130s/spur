@@ -11,4 +11,4 @@ TrajectoryPlannerROS:
   acc_lim_x: 2.5
   acc_lim_y: 2.5
 
-  holonomic_robot: true
+  holonomic_robot: false  # making this true needs more tuning. So first let's turn this off for now to tune other more important configs (odom, amcl)
