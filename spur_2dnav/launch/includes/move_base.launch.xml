@@ -18,7 +18,11 @@
     <rosparam file="$(find spur_2dnav)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />   
     <rosparam file="$(find spur_2dnav)/config/local_costmap_params.yaml" command="load" />   
     <rosparam file="$(find spur_2dnav)/config/global_costmap_params.yaml" command="load" />
-    <rosparam file="$(find spur_2dnav)/config/base_local_planner_params.yaml" command="load" />
+<!--    <rosparam file="$(find spur_2dnav)/config/base_local_planner_params.yaml" command="load" /> -->
+    <rosparam file="$(find spur_2dnav)/config/move_base_params.yaml" command="load" />
+    <rosparam file="$(find spur_2dnav)/config/global_planner_params.yaml" command="load" />
+    <rosparam file="$(find spur_2dnav)/config/navfn_global_planner_params.yaml" command="load" />
+    <rosparam file="$(find spur_2dnav)/config/dwa_local_planner_params.yaml" command="load" />
 
     <!-- external params file that could be loaded into the move_base namespace -->
     <rosparam file="$(arg custom_param_file)" command="load" />
