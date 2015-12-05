@@ -157,8 +157,7 @@ Run RViz, `gmapping <http://wiki.ros.org/gmapping?distro=indigo>`_, along with r
 
  term-1a$ roslaunch spur_bringup minimal.launch                            # Real robot
  term-1b$ roslaunch spur_gazebo spur_world.launch visualize_laser:=true    # Simulation
- term-2$ roslaunch spur_description rviz.launch 
- term-3$ roslaunch spur_2dnav gmapping.launch
+ term-2$ roslaunch spur_2dnav gmapping.launch
 
 After launching above, follow existing other tutorials (e.g. `one from Turtlebot <http://wiki.ros.org/turtlebot_gazebo/Tutorials/indigo/Make%20a%20map%20and%20navigate%20with%20it>`_).
 
