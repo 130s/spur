@@ -1,0 +1,14 @@
+<launch>
+
+  <test pkg="spur_controller" type="test_spur_odom_vel.py" test-name="test_spur_odom_vel"
+        time-limit="100" args="" />
+<!--         
+  <test pkg="rostest" type="hztest" test-name="test_move_group" name="test_move_group" time-limit="60">
+    <param name="test_move_group/topic" value="/move_group/status" />
+    <param name="test_move_group/hz" value="5.0" />
+    <param name="test_move_group/hzerror" value="0.25" />
+    <param name="test_move_group/test_duration" value="5.0" />
+    <param name="test_move_group/wait_time" value="30.0" />
+  </test>
+ -->    
+</launch>
